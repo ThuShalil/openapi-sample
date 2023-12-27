@@ -1,0 +1,31 @@
+get:
+  tags:
+    - Client
+  summary: Get clients list
+  description: Get clients list
+  operationId: getClients
+  responses:
+    200:
+      description: success
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../schemas/Client.yaml"
+post:
+  tags:
+    - Client
+  summary: Add new client
+  description: Add new client
+  operationId: addClient
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/Client.yaml"
+  responses:
+    200:
+      description: Successful operation
+    400:
+      description: Bad request

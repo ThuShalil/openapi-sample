@@ -1,0 +1,20 @@
+get:
+  tags:
+    - Client
+  summary: Get client by id
+  description: Get client
+  operationId: getClient
+  parameters:
+    - in: path
+      name: clientId
+      schema:
+        type: number
+  responses:
+    200:
+      description: success
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Client.yaml"
+    400:
+      description: Client not found

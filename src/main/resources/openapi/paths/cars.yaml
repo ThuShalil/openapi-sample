@@ -1,0 +1,31 @@
+get:
+  tags:
+    - Car
+  summary: Get cars list
+  description: Get cars list
+  operationId: getCars
+  responses:
+    200:
+      description: success
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../schemas/Car.yaml"
+post:
+  tags:
+    - Car
+  summary: Add new car
+  description: Add new car
+  operationId: addCar
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/Car.yaml"
+  responses:
+    200:
+      description: Successful operation
+    400:
+      description: Bad request

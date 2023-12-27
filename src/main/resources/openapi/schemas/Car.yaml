@@ -1,0 +1,14 @@
+properties:
+  color:
+    type: string
+  productionDate:
+    type: string
+    format: date
+  brand:
+    type: string
+    enum:
+      - BMW
+      - VW
+      - LEXUS
+      - TOYOTA
+      - OPEL

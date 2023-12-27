@@ -1,0 +1,20 @@
+openapi: 3.0.0
+info:
+  title: Simple Company Management
+  description: Api for Simple Company Management
+  version: 1.0.0
+tags:
+  - name: Client
+    description: API for clients
+  - name: Car
+    description: API for cars
+
+paths:
+  /client:
+    $ref: "./paths/clients.yaml"
+  /client/{clientId}:
+    $ref: "./paths/client.yaml"
+  /car:
+    $ref: "./paths/cars.yaml"
+  /car/{carId}:
+    $ref: "./paths/car.yaml"

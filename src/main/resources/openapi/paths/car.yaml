@@ -1,0 +1,20 @@
+get:
+  tags:
+    - Car
+  summary: Get car by id
+  description: Get car
+  operationId: getCar
+  parameters:
+    - in: path
+      name: carId
+      schema:
+        type: number
+  responses:
+    200:
+      description: success
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Car.yaml"
+    400:
+      description: Car not found
